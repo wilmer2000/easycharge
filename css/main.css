@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+*{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+}
+b,span,strong{font-size:inherit;}
+b,strong{font-weight: 700;}
+a,a:hover,a:focus,a:active{text-decoration: none;color: inherit;}
+h1,h2,h3,h4,h5,h6{margin-top: 0;font-weight: 700;}
+
+.btn {}
+.btn.btn_line {}
+
+.flex_center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.flex_item {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+}
+
+
+header,.bottom_links{position: fixed;top: 0;left: 0;z-index:99;width: 100%;}
+.bottom_links{top:initial;bottom: 0;}
+
+header nav {}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    width: 100%;
+    padding:30px;
+    margin:0;
+}
+header nav ul li{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    list-style:none;
+}
+header nav ul li.logo{
+    flex: 1 1 auto;
+}
+header nav ul li.logo a{
+	padding:0;
+    float: left;
+}
+header nav ul li.logo img{
+    height: 50px;
+    width: auto;
+    display: block;
+}
+header nav ul li a{display:inline-block;color: #FFF;padding:0 15px;text-align:center;text-transform: uppercase;font-weight: 300;}
+header nav ul li a:hover{color: #FFF;}
+
+.ubicanos ,
+.contacto {
+    display: block;
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    padding: 15px;
+    background: transparent;
+    border-radius: 50%;
+}
+.ubicanos a,
+.contacto a{display: block;position:relative;}
+.ubicanos a img,
+.contacto a img{display: block;width:50px;height: auto;
+    transition: all 150ms ease-out;}
+.ubicanos:hover img,
+.contacto:hover img{
+    transform: scale(1.1);
+}
+.contacto a span,
+.ubicanos a span{
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 15px);
+    margin-top: -15.5px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 25px;
+    color: #02B4B6;
+    width: auto;
+    text-transform: uppercase;
+    transition: all 150ms ease-out;
+    transform-origin: -35px center;
+    transform: rotate(90deg);
+    opacity: 0
+}
+
+.contacto {
+    left: initial;
+    right: 15px;
+}
+.contacto a span{
+    transition: all 150ms ease-out;
+    right: calc(100% + 15px);
+    left: initial;
+    transform-origin: calc(100% + 35px) center;
+    transform: rotate(-90deg);
+}
+.ubicanos:hover a span{
+    transform: rotate(0deg);
+    opacity: 1
+}
+.contacto:hover a span{
+    transform: rotate(0deg);
+    opacity: 1
+}
+
+.slider{position: relative;}
+.slider:before{background: url(../img/separator_white.svg) no-repeat;display: block;position:absolute;z-index:2;bottom: 0;left: 0;width:100%;height: 50%;content: "";background-size: 101% auto;background-position: center top;}
+.slider:after{
+	background: #0cebeb;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	display: block;position:absolute;z-index:1;top: 0;left: 0;width:100%;height: 100%;content: "";background-size: 100% auto;opacity: 0.8}
+.slider .img_slider{width: 100%;height: auto;display: block;}
+.slider h1{
+    width: 100%;
+    height: auto;
+    display: block;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 2.2em;
+    max-width: 500px;
+}
+.slider h1 span{display: block;font-weight: inherit;font-size:1.2em;margin-bottom: 15px;}
+.slider > .flex_center{position: absolute;width: 100%;height: 100%;z-index: 3}
+.slider .text_center_slider{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
+}
+.slider .text_center_slider .txt,
+.slider .text_center_slider .img{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+}
+.slider .text_center_slider .img{
+
+}
+
