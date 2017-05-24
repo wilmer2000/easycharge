@@ -5,6 +5,9 @@
 	font-weight: 300;
 	font-size: 18px;
 }
+*:focus {
+outline: 0!important;
+}
 b,span,strong{font-size:inherit;}
 b,strong{font-weight: 700;}
 a,a:hover,a:focus,a:active{text-decoration: none;color: inherit;}
