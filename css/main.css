@@ -11,7 +11,7 @@ outline: 0!important;
 b,span,strong{font-size:inherit;}
 b,strong{font-weight: 700;}
 a,a:hover,a:focus,a:active{text-decoration: none;color: inherit;}
-h1,h2,h3,h4,h5,h6{margin-top: 0;font-weight: 400;color:#02B4B6}
+h1,h2,h3,h4,h5,h6{margin-top: 0;font-weight: 400;color:#02B4B6;margin-bottom: 30px;}
 
 .btn {
     border: solid 2px;
@@ -53,6 +53,30 @@ h1,h2,h3,h4,h5,h6{margin-top: 0;font-weight: 400;color:#02B4B6}
     align-self: center;
 }
 
+.flex_content_doble{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+.flex_content_doble .left,
+.flex_content_doble .right{
+    order: 0;
+    flex: 1 1 auto;
+    align-self: center;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.flex_content_doble .left{
+    text-align: left;
+}
+.flex_content_doble .right{
+    text-align: right;
+}
 
 header,.bottom_links{position: fixed;top: 0;left: 0;z-index:99;width: 100%;}
 .bottom_links{top:initial;bottom: 0;}
@@ -175,7 +199,7 @@ header nav ul li a:hover{color: #FFF;}
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: stretch;
     align-items: flex-start;
 }
@@ -187,10 +211,17 @@ header nav ul li a:hover{color: #FFF;}
     width: 33.3333333333%;
 }
 
-.tech_item {text-align: center;padding: 15px; padding-bottom: 100px;}
+.tech_item {text-align: center;padding: 15px;}
 .tech_item img{width: 100%;height: auto;padding: 15px;max-width:200px}
 .tech_item figcaption{padding: 0 30px;}
 
 
 #easycharge{padding:100px 0}
-#easycharge h1{margin-bottom:30px}
+#easycharge .flex_content_doble{ /* padding:60px 0 */ }
+.logo_circulo {padding: 60px;display: block;margin: 0 auto;text-align: center;float: none;width: 280px;height: 280px;box-shadow: 0 0 80px 0px rgba(255, 255, 255, 0.32), -30px -29px 80px 0px rgba(2, 180, 182, 0.3), 25px 20px 130px -5px rgba(47, 55, 150, 0.6);border-radius: 50%;transition: all 150ms ease-out;}
+.logo_circulo img{width: auto;height: 100%;}
+.cont_map {}
+.cont_map .map{}
+.cont_map .map iframe{width: 100%;height:600px;}
+
+.flex_content_doble.publicidad img{width: 100%;display: block;height: auto;padding: 60px;margin: 0 auto;}
