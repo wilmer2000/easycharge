@@ -98,7 +98,7 @@ header {
     transition: all 150ms ease-out;
 }
 header.stick{
-    background: #02B4B6; 
+    background: #33354e; 
 }
 header nav ul{
     display: flex;
@@ -263,7 +263,7 @@ header nav ul li a:hover{color: #FFF;}
     align-self: auto;
     background: #33354e;
     padding:30px;
-    width: 500px;
+    width: 600px;
 }
 .flex_formulario .left{
     order: 0;
@@ -276,7 +276,7 @@ footer h3{margin:0;margin-bottom:15px;}
 footer .form-group{margin-bottom: 0;}
 footer .form-group+.form-group{margin-top:30px;}
 footer input{height:49px!important}
-footer .btn{color:#33354E!important}
+footer .btn{color:#33354E!important;background:#0cebeb;border-color: #0cebeb;margin-top: 40px;}
 footer input,
 footer textarea {
     color: #FFF!important;
