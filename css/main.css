@@ -192,6 +192,8 @@ header nav ul li a:hover{color: #FFF;}
     justify-content: center;
     align-content: stretch;
     align-items: stretch;
+    max-width: 1200px;
+    padding: 0 15px;
 }
 .slider .text_center_slider .txt,
 .slider .text_center_slider .img{
