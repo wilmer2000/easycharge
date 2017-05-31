@@ -308,3 +308,11 @@ ul.direccion li a{color: #02B4B6;}
 ul.direccion li b{display: block;color: #646464;}
 ul.social li {display: inline-block;}
 ul.social li svg{display: block;width: 30px;height: auto}
+
+.quote_text{
+    margin: 100px auto;
+    font-size: 1.5em;
+    text-align: center;
+    max-width: 690px;
+    position: relative;
+}
