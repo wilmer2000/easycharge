@@ -12,7 +12,7 @@ b,span,strong{font-size:inherit;}
 b,strong{font-weight: 700;}
 a,a:hover,a:focus,a:active{text-decoration: none;color: inherit;}
 h1,h2,h3,h4,h5,h6{margin-top: 0;font-weight: 400;color:#02B4B6;margin-bottom: 30px;text-shadow: 0 0 10px rgba(2, 180, 182, 0.25);}
-
+section{position: relative;z-index: 3}
 input,
 textarea{
     border: 0!important;
@@ -34,12 +34,12 @@ textarea{
     transition: all 150ms ease-out; 
     background: #FFF;
     border-color: #FFF;
-    color: #0cebeb;
+    color: #02B4B6;
     transform:translateY(0px);
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
 }
 .btn:hover {
-    color: #02B4B6;
+    color: #00d6d6;
     box-shadow: 10px 10px 40px 5px rgba(0,0,0,0.2);
     transform:translateY(-3px);
 }
@@ -315,4 +315,19 @@ ul.social li svg{display: block;width: 30px;height: auto}
     text-align: center;
     max-width: 690px;
     position: relative;
+}
+
+.gallery {margin-top: 150px;}
+.gallery .flex_container_description .flex_item{
+    padding: 15px;
+    width: 25%;
+}
+.gallery .flex_item img{
+    display: block;
+    border-radius: 5px;
+    transition: all 250ms ease-in;
+}
+.gallery .flex_item img:hover{
+    box-shadow: 0 0 80px 0px rgba(255, 255, 255, 0.32), -30px -29px 80px 0px rgba(2, 180, 182, 0.3), 25px 20px 130px -5px rgba(47, 55, 150, 0.6);
+    transform: scale(1.1);
 }
