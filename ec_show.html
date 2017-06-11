@@ -3,25 +3,25 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>EasyCharge - M</title>
+        <title>EasyCharge - Mantenete conectado</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
-    <body>
+    <body class="show_section">
 
       <header>
         <div class="container">
           <nav id="menu">
             <ul>
-              <li class="logo"><a href="#inicio"><img src="img/logo-battery-white.svg" alt=""></a></li>
-              <li><a href="#cargador">¿Quienes somos?</a></li>
-              <li><a href="ec_show.html">EC-SHOW</a></li>
-              <li><a href="ec_rent.html">EC-RENT</a></li>
+              <li class="logo"><a href="index.html"><img src="img/logo-battery-white.svg" alt=""></a></li>
+              <li><a href="index.html#easycharge">¿Quienes somos?</a></li>
+              <li><a href="ec_show.html">SHOW</a></li>
+              <li><a href="ec_rent.html">RENT</a></li>
               <li><a href="anunciate.html">Anunciate</a></li>
-              <li><a href="#mapa">Encontranos</a></li>
+              <li><a href="index.html#encuentranos">Encontranos</a></li>
               <li><a href="#contacto">Contactanos</a></li>
             </ul>
           </nav>
@@ -152,10 +152,9 @@
         </div>
       </section>
 
-
       <section id="easycharge">
         <div class="container">
-          <div class="flex_content_doble easycharge">
+          <div class="flex_content_doble easycharge contact_easycharge gradiant">
             <div class="right">
               <div class="logo_circulo">
                 <img src="img/logo-full.svg" alt="">
@@ -164,6 +163,9 @@
             <div class="left">
               <h2>¿Queres formar parte de nuestra alianza?</h2>
               <p>Si tenes un restaurante, bar, centro de estética, gimnasio o establecimiento en donde tus clientes necesiten cargar sus celulares y dispositivos moviles contáctanos y disfruta de la experiencia única de Easy Charge.</p>
+              <div class="cont_btn">
+                <a href="#contacto" class="btn">Contactanos</a>
+              </div>
             </div>
           </div>
         </div>
@@ -178,8 +180,7 @@
             <div class="flex_item">
               <div class="flex_formulario">
                 <div class="right">
-                  <form action="#">
-                    <h3>Contactanos</h3>
+                  <form action="mail.php">                    <h3>Contactanos</h3>
                     <div class="form-group">
                       <input type="text" class="form-control" id="name" placeholder="Nombre">
                     </div>

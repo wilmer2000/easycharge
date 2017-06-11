@@ -1,17 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf')  format('truetype'), url('../fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSansSemibold';
+  src: url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Semibold.woff') format('woff'), url('../fonts/OpenSans-Semibold.ttf')  format('truetype'), url('../fonts/OpenSans-Semibold.svg#OpenSans-Semibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf')  format('truetype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 *{
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+	font-family: 'OpenSansLight', sans-serif;
 	font-size: 18px;
 }
 *:focus {
 outline: 0!important;
 }
 b,span,strong{font-size:inherit;}
-b,strong{font-weight: 700;}
+b,strong{font-family: 'OpenSansBold';}
 a,a:hover,a:focus,a:active{text-decoration: none;color: inherit;}
-h1,h2,h3,h4,h5,h6{margin-top: 0;font-weight: 400;color:#02B4B6;margin-bottom: 30px;text-shadow: 0 0 10px rgba(2, 180, 182, 0.25);}
+h1,h2,h3,h4,h5,h6{margin-top: 0;font-family: 'OpenSansSemibold';color:#02B4B6;margin-bottom: 30px;text-shadow: 0 0 10px rgba(2, 180, 182, 0.25);}
 section{position: relative;z-index: 3}
 input,
 textarea{
@@ -132,7 +148,7 @@ header nav ul li.logo img{
     width: auto;
     display: block;
 }
-header nav ul li a{display:inline-block;color: #FFF;padding:0 15px;text-align:center;text-transform: uppercase;font-weight: 300;}
+header nav ul li a{display:inline-block;color: #FFF;padding:0 15px;text-align:center;text-transform: uppercase;font-family: 'OpenSansLight';}
 header nav ul li a:hover{color: #FFF;}
 
 .ubicanos ,
@@ -179,11 +195,11 @@ header nav ul li a:hover{color: #FFF;}
     height: auto;
     display: block;
     color: #FFF;
-    font-weight: 300;
+    font-family: 'OpenSansLight';
     font-size: 2.2em;
     max-width: 500px;
 }
-.slider h1 span{display: block;font-weight: inherit;font-size:1.2em;margin-bottom: 25px;}
+.slider h1 span{display: block;font-family: inherit;font-size:1.2em;margin-bottom: 25px;}
 .slider > .flex_center{position: absolute;width: 100%;height: 100%;z-index: 3;top: 0;left: 0}
 .slider .text_center_slider{
     display: flex;
@@ -241,7 +257,7 @@ header nav ul li a:hover{color: #FFF;}
 
 #easycharge{padding:100px 0}
 #easycharge .flex_content_doble{ /* padding:60px 0 */ }
-.logo_circulo {padding: 60px;display: block;margin: 0 auto;text-align: center;float: none;width: 280px;height: 280px;box-shadow: 0 0 80px 0px rgba(255, 255, 255, 0.32), -30px -29px 80px 0px rgba(2, 180, 182, 0.3), 25px 20px 130px -5px rgba(47, 55, 150, 0.6);border-radius: 50%;transition: all 150ms ease-out;}
+.logo_circulo {background:#FFF;padding: 60px;display: block;margin: 0 auto;text-align: center;float: none;width: 280px;height: 280px;box-shadow: 0 0 80px 0px rgba(255, 255, 255, 0.32), -30px -29px 80px 0px rgba(2, 180, 182, 0.3), 25px 20px 130px -5px rgba(47, 55, 150, 0.6);border-radius: 50%;transition: all 150ms ease-out;}
 .logo_circulo img{width: auto;height: 100%;}
 .cont_map {}
 .cont_map .map{}
@@ -320,14 +336,45 @@ ul.social li svg{display: block;width: 30px;height: auto}
 .gallery {margin-top: 150px;}
 .gallery .flex_container_description .flex_item{
     padding: 15px;
-    width: 25%;
+    width: 50%;
 }
 .gallery .flex_item img{
     display: block;
     border-radius: 5px;
     transition: all 250ms ease-in;
+    filter: grayscale(100);
+    width: 100%;
+    height: auto;
+    opacity: 0.3
 }
 .gallery .flex_item img:hover{
     box-shadow: 0 0 80px 0px rgba(255, 255, 255, 0.32), -30px -29px 80px 0px rgba(2, 180, 182, 0.3), 25px 20px 130px -5px rgba(47, 55, 150, 0.6);
+    filter: grayscale(0);
     transform: scale(1.1);
+    opacity: 1
 }
+
+section#cargador{z-index: 4}
+section#encuentranos{z-index: 2}
+
+.contact_easycharge{overflow:visible!important;border-radius: 110px;height: 220px;background: url(../img/gallery/photo_2.jpg);background-size: cover;background-position: center;}
+.contact_easycharge .right{z-index: 4;width:280px;}
+.contact_easycharge .left{z-index: 4;}
+.contact_easycharge:after{overflow:visible!important;border-radius: 110px;}
+.contact_easycharge h2{color: #FFF;margin-bottom: 10px;}
+.contact_easycharge p{color: #FFF;}
+
+
+.rent_section .flex_container_description .flex_item{width:25%;}
+.rent_section .flex_container_description .number.logo_circulo{
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    line-height: 80px;
+    font-size: 40px;
+    text-align: center;
+    color: #02B4B6;
+    margin-bottom: 50px;
+    box-shadow: 0 0 80px 0px rgba(255, 255, 255, 0.32), -10px -10px 40px 0px rgba(2, 180, 182, 0.2), 14px 14px 120px -5px rgba(47, 55, 150, 0.67);
+}
+
