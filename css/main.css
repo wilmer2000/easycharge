@@ -294,7 +294,7 @@ footer h3{margin:0;margin-bottom:15px;}
 footer .form-group{margin-bottom: 0;}
 footer .form-group+.form-group{margin-top:30px;}
 footer input{height:49px!important}
-footer .btn{color:#33354E!important;background:#0cebeb;border-color: #0cebeb;margin-top: 40px;}
+footer .btn{color:#33354E!important;background:#0cebeb;border-color: #0cebeb;/* margin-top: 40px; */}
 footer input,
 footer textarea {
     color: #FFF!important;
@@ -378,3 +378,7 @@ section#encuentranos{z-index: 2}
     box-shadow: 0 0 80px 0px rgba(255, 255, 255, 0.32), -10px -10px 40px 0px rgba(2, 180, 182, 0.2), 14px 14px 120px -5px rgba(47, 55, 150, 0.67);
 }
 
+
+.cont_map {
+    margin: 50px 0;
+}
