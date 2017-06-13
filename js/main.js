@@ -14,7 +14,7 @@ $(document).ready(function(){
 	};
 	$('#contacto form').submit(function(event) {
 		event.preventDefault();
-		if (grecaptcha.getResponse() == "") {
+		if (grecaptcha.getResponse() != "") {
 	 		var data = {
 			    name: $("#contacto #name").val(),
 			    email: $("#contacto #phone").val(),
