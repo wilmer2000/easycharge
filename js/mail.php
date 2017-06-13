@@ -1,12 +1,24 @@
 <?php
-  
-  //Email information
-  $admin_email = "hola@easycharge.com.uy";
-  $name = $_REQUEST['name'];
-  $phone = $_REQUEST['phone'];
-  $mail = $_REQUEST['mail'];
-  $comment = $_REQUEST['comment'];
-  //send email
-  mail($admin_email, "$subject", $comment, "From:" . $email);
-  
+
+  $name = $_POST['name'];
+  $phone = $_POST['phone'];
+  $mail = $_POST['mail'];
+  $comment = $_POST['comment'];
+  $message = '';
+
+  $to  = 'hola@easycharge.com.uy';
+  $subject = 'Contacto desde la Página de EasyCharge';
+
+  // mensaje
+  // $message = '<p><strong>Nombre: <strong> {$name}</p><p><strong>Teléfono: <strong> {$phone}</p><p><strong>Email: <strong> {$mail}</p><p><strong>Comentario: <strong> {$comment}</p>';
+  // $message = '{$name} {$phone} {$mail} {$comment}';
+  $message ="Nombre : ".$name."\r\n\r\nTeléfono : ".$phone."\r\nEmail : ".$mail."\r\Comentarios :". $comment ;
+    
+
+  // Para enviar un correo HTML, debe establecerse la cabecera Content-type
+  $headers = "De: " . $_POST["name"] . "<". $_POST["mail"] .">\r\n";
+
+// Enviarlo
+mail($to, $subject, $message, $headers);
+
 ?>

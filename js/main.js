@@ -16,10 +16,10 @@ $(document).ready(function(){
 		event.preventDefault();
 		if (grecaptcha.getResponse() != "") {
 	 		var data = {
-			    name: $("#contacto #name").val(),
-			    email: $("#contacto #phone").val(),
-			    message: $("#contacto #mail").val(),
-			    message: $("#contacto #comment").val()
+			    'name': $("#contacto #name").val(),
+			    'phone': $("#contacto #phone").val(),
+			    'mail': $("#contacto #mail").val(),
+			    'comment': $("#contacto #comment").val()
 			};
 			$.ajax({
 			    type: "POST",
@@ -33,4 +33,3 @@ $(document).ready(function(){
 	});
 
 });
-
