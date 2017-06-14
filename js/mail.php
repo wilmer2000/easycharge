@@ -12,7 +12,7 @@
   // mensaje
   // $message = '<p><strong>Nombre: <strong> {$name}</p><p><strong>Teléfono: <strong> {$phone}</p><p><strong>Email: <strong> {$mail}</p><p><strong>Comentario: <strong> {$comment}</p>';
   // $message = '{$name} {$phone} {$mail} {$comment}';
-  $message ="Nombre : ".$name."\r\n\r\nTeléfono : ".$phone."\r\nEmail : ".$mail."\r\Comentarios :". $comment ;
+  $message ="Nombre: ".$name."\rTeléfono: ".$phone."\rEmail: ".$mail."\rComentarios: ". $comment ;
     
 
   // Para enviar un correo HTML, debe establecerse la cabecera Content-type

@@ -21,14 +21,18 @@ $(document).ready(function(){
 			    'mail': $("#contacto #mail").val(),
 			    'comment': $("#contacto #comment").val()
 			};
-			$.ajax({
-			    type: "POST",
-			    url: "mail.php",
-			    data: data,
-			    success: function(){
-			        console.log('enviado')
-			    }
-			});
+			$('.messgmodal').fadeIn('fast');
+			setInterval(function(){
+				$.ajax({
+				    type: "POST",
+				    url: "mail.php",
+				    data: data,
+				    success: function(){
+						$('.messgmodal').fadeOut('fast');
+						$("#contacto .form-control").val('');
+				    }
+				});
+			}, 1500);
 		}
 	});
 
