@@ -22,7 +22,7 @@ $(document).ready(function(){
 			    'comment': $("#contacto #comment").val()
 			};
 			$('.messgmodal').fadeIn('fast');
-			setInterval(function(){
+			setTimeout(function(){
 				$.ajax({
 				    type: "POST",
 				    url: "mail.php",
@@ -30,6 +30,7 @@ $(document).ready(function(){
 				    success: function(){
 						$('.messgmodal').fadeOut('fast');
 						$("#contacto .form-control").val('');
+						grecaptcha.reset();
 				    }
 				});
 			}, 1500);
