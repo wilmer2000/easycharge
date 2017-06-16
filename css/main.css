@@ -261,7 +261,7 @@ header nav ul li a:hover{color: #FFF;}
 .logo_circulo img{width: auto;height: 100%;}
 .cont_map {}
 .cont_map .map{}
-.cont_map .map iframe{width: 100%;height:600px;}
+.cont_map .map iframe{width: 100%;height:600px;border:0;}
 
 .flex_content_doble.publicidad img{width: 100%;display: block;height: auto;padding: 60px;margin: 0 auto;}
 
@@ -428,3 +428,5 @@ section#encuentranos{z-index: 2}
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
 }
+
+#map{height: 600px;}
