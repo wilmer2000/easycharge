@@ -37,6 +37,11 @@ $(document).ready(function(){
 		}
 	});
 
+    $('.btn_menu').on('click touchstart', function(event){
+        event.preventDefault();
+        $('header #menu').slideToggle('fast');
+        $('.btn_menu').toggleClass('open');
+    })
 /*function initMap() {
     var map;
     var bounds = new google.maps.LatLngBounds();
