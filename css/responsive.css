@@ -62,7 +62,8 @@
 
     #encuentranos .slider .img img{max-width: 300px;margin-bottom: 30px;}
     
-    .flex_container_description .flex_item{width: 50%;}
+    .flex_container_description .flex_item,
+    .rent_section .flex_container_description .flex_item{width: 50%;}
 
     .flex_formulario{margin-bottom: 150px;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;margin-top: 150px;}
 
@@ -80,11 +81,13 @@
     .contact_easycharge .right{height: 10px;}
     .contact_easycharge .logo_circulo{margin-top: -150px;}
     .contact_easycharge .left{padding:50px;}
+    .contact_easycharge .btn {width: 100%;padding-left: 0;padding-right: 0;margin-top:20px;}
 }
 @media (max-width: 660px) {
     .flex_formulario .right{width: 100%;}
     .flex_container_description .flex_item,
-    .gallery .flex_container_description .flex_item{width: 100%}
+    .gallery .flex_container_description .flex_item,
+    .rent_section .flex_container_description .flex_item{width: 100%}
     #inicio .slider .img img{display: none;}
     #encuentranos .slider .img img{max-width: 90px;margin-bottom: 0;}
     .cont_map .map iframe{height: 400px;}
@@ -101,6 +104,6 @@
 
     #easycharge {padding: 50px 0;}
     .flex_content_doble.publicidad img{padding: 0}
-    .slider h1{margin-top: 50px;}
+    .slider h1{margin-top: 10px;}
 
 } 
