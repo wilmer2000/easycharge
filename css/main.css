@@ -340,6 +340,10 @@ header nav ul li a:hover{color: #FFF;}
     width: 33.3333333333%;
 }
 
+.flex_container_description.content_2 .flex_item {
+    width: 25%;
+}
+
 .tech_item {text-align: center;padding: 15px;}
 .tech_item img{width: 100%;height: auto;padding: 15px;max-width:200px}
 .tech_item figcaption{padding: 0 30px;}
