@@ -63,7 +63,8 @@
     #encuentranos .slider .img img{max-width: 300px;margin-bottom: 30px;}
     
     .flex_container_description .flex_item,
-    .rent_section .flex_container_description .flex_item{width: 50%;}
+    .rent_section .flex_container_description .flex_item,
+    .flex_container_description.content_2 .flex_item{width: 50%;}
 
     .flex_formulario{margin-bottom: 150px;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;margin-top: 150px;}
 
@@ -87,7 +88,8 @@
     .flex_formulario .right{width: 100%;}
     .flex_container_description .flex_item,
     .gallery .flex_container_description .flex_item,
-    .rent_section .flex_container_description .flex_item{width: 100%}
+    .rent_section .flex_container_description .flex_item,
+    .flex_container_description.content_2 .flex_item{width: 100%}
     #inicio .slider .img img{display: none;}
     #encuentranos .slider .img img{max-width: 90px;margin-bottom: 0;}
     .cont_map .map iframe{height: 400px;}
