@@ -70,6 +70,8 @@
 
     #contacto .gradiant{position:absolute;}
     #contacto .slider > .flex_center{position:relative;}
+
+    .show_section .flex_container_description .flex_item{width: 25%;}
 }
 @media (max-width: 768px) {
     .slider .arrow_down{display: none;}
@@ -83,6 +85,7 @@
     .contact_easycharge .logo_circulo{margin-top: -150px;}
     .contact_easycharge .left{padding:50px;}
     .contact_easycharge .btn {width: 100%;padding-left: 0;padding-right: 0;margin-top:20px;}
+    .show_section .flex_container_description .flex_item{width: 33.33333333333%;}
 }
 @media (max-width: 660px) {
     .flex_formulario .right{width: 100%;}
@@ -93,6 +96,10 @@
     #inicio .slider .img img{display: none;}
     #encuentranos .slider .img img{max-width: 90px;margin-bottom: 0;}
     .cont_map .map iframe{height: 400px;}
+    .show_section .flex_container_description.establecimientos .flex_item {width: 50%;}
+    .show_section .flex_container_description.establecimientos .flex_item h2{display: none;}
+    .show_section .flex_container_description.establecimientos .flex_item p{display: none;}
+    .show_section .flex_container_description.establecimientos .flex_item .tech_item{padding:0;}
 } 
 @media (max-width: 480px) {
     *{font-size:14px;}

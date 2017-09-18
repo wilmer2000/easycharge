@@ -501,6 +501,8 @@ section#encuentranos{z-index: 2}
 }
 
 .rent_section .flex_container_description .flex_item{width:25%;}
+.show_section .flex_container_description.establecimientos .flex_item{width:20%;}
+.show_section .flex_container_description.establecimientos .flex_item h2{font-size: 1.2em;margin-bottom: 10px;}
 
 
 .cont_map {
