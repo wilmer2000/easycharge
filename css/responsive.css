@@ -1,7 +1,15 @@
 
+@media (min-width: 1201px) {
+    .show_section .flex_container_description.establecimientos .flex_item{width: 20%;}
+}
 @media (max-width: 1200px) {
     #inicio .slider .img img{max-width: 300px;}
     #encuentranos .slider .img img{max-width: 480px;}
+    .flex_container_description .flex_item,
+    .rent_section .flex_container_description .flex_item,
+    .flex_container_description.content_2 .flex_item,
+    .show_section .flex_container_description .flex_item,
+    .show_section .flex_container_description.establecimientos .flex_item{width: 50%;}
 }
 @media (max-width: 991px) {
     body {padding-top: 70px;}
@@ -12,10 +20,11 @@
     header nav ul{-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
     header nav ul li.logo{display: none;}
     header nav ul li{display: block;width:100%;}
-    header nav ul li a{display: block;width:100%;padding:10px 15px;text-align: left;font-size: 1.5em;}
-    header #menu{background: #33354e;display: none;width: 100%}
-
-    .menu_mobile{display: table;width: 100%;padding: 15px;}
+    header nav ul li a{display: block;width:100%;padding:10px 15px;text-align: left;font-size: 1.5em;line-height:normal;height: auto;}
+    header #menu{background: #33354e;display: none;width: 100%;height: calc(100vh - 69px);overflow-x: auto;}
+    .submenu .submenu_{display: block;position: relative;top: 0;left: 0;padding: 0;background: transparent;}
+    .submenu .submenu_ a{display: block;}
+    .menu_mobile{display: table;width: 100%;padding: 15px;height: 69px;}
     .menu_mobile {background: #33354e}
     .menu_mobile .logo_{display:block;float:left;}
     .menu_mobile .logo_ img{max-height: 40px;width:auto;height: 100%;}
@@ -62,16 +71,10 @@
 
     #encuentranos .slider .img img{max-width: 300px;margin-bottom: 30px;}
     
-    .flex_container_description .flex_item,
-    .rent_section .flex_container_description .flex_item,
-    .flex_container_description.content_2 .flex_item{width: 50%;}
-
     .flex_formulario{margin-bottom: 150px;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;margin-top: 150px;}
 
     #contacto .gradiant{position:absolute;}
     #contacto .slider > .flex_center{position:relative;}
-
-    .show_section .flex_container_description .flex_item{width: 25%;}
 }
 @media (max-width: 768px) {
     .slider .arrow_down{display: none;}
