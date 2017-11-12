@@ -1,4 +1,7 @@
-<?php require('includes/html/header.php'); ?>
+<?php
+	define( 'SCRIPT_ROOT', __DIR__ );
+	include(SCRIPT_ROOT.'/includes/html/header.php'); 
+?>
 
       <section id="inicio">
         <div class="slider separator_bottom gradiant">
@@ -148,6 +151,9 @@
       </section>
 
 
-<?php require('includes/html/find_us.php'); ?>
+<?php 
 
-<?php require('includes/html/footer.php'); ?>
+	include(SCRIPT_ROOT.'/includes/html/find_us.php');
+	include(SCRIPT_ROOT.'/includes/html/footer.php');
+
+?>

@@ -2,7 +2,7 @@
       <footer id="contacto">
         <div class="slider  separator_top ">
           <div class="gradiant">
-            <img src="../img/slider/slide_2.jpg" alt="" class="img-responsive img_slider">
+            <img src="img/slider/slide_2.jpg" alt="" class="img-responsive img_slider">
           </div>
           <div class="flex_center">
             <div class="flex_item">
