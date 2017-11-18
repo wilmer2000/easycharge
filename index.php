@@ -5,21 +5,6 @@ ob_start();
 // Enable sessions
 session_start();
 
-// Include classes
-include('./classes/class.user.php');
-
-
-// Database credentials
-define('DBHOST','localhost');
-define('DBUSER','root');
-define('DBPASS','');
-define('DBNAME','blog');
-
-$db = new PDO("mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS);
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-$user = new User($db); 
-
 // Just in case
 set_include_path('.');
 
@@ -123,3 +108,5 @@ if($expires = route_is_cached()) {
     );
     file_put_contents($cache_file, serialize($data));
 }
+
+require_once './config.php';

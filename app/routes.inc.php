@@ -8,6 +8,7 @@ $route['show'] = 'pages/show.php';
 $route['rent'] = 'pages/rent.php';
 $route['eventos'] = 'pages/eventos.php';
 $route['anunciate'] = 'pages/anunciate.php';
+$route['admin'] = 'pages/admin/index.php';
 
 // You can match simple routes
 // $route['admin/albums'] = 'pages/admin/albums/index.php';
