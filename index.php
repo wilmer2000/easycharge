@@ -109,4 +109,3 @@ if($expires = route_is_cached()) {
     file_put_contents($cache_file, serialize($data));
 }
 
-require_once './config.php';

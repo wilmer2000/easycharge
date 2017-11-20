@@ -13,12 +13,12 @@
                   </div>
                 </div>
                 <div class="img">
-                  <img src="img/product.png" class="img-responsive" alt="">
+                  <?php echo $html->img('img/product.png',['class'=>'img-responsive']); ?>
                 </div>
               </div>
             </div>
           </div>
-          <img src="img/slider/slide_1.jpg" alt="" class="img-responsive img_slider">
+          <?php echo $html->img('img/slider/slide_1.jpg',['class'=>'img-responsive img_slider']); ?>
           <a href="#" class="arrow_down">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="465.7" height="88.2" viewBox="187.6 170.3 465.7 88.2" enable-background="new 187.638 170.269 465.706 88.202" xml:space="preserve"><polyline fill="none" stroke="#02B4B6" stroke-width="8.5" stroke-miterlimit="10" points="652 174.3 420.5 254 189 174.3 "/></svg>
           </a>
@@ -30,7 +30,7 @@
           <div class="flex_content_doble easycharge">
             <div class="right">
               <div class="logo_circulo">
-                <img src="img/logo-full.svg" alt="">
+                <?php echo $html->img('img/logo-full.svg'); ?>
               </div>
             </div>
             <div class="left">
@@ -47,7 +47,7 @@
               <p>Easy Charge brinda un servicio gratuito de carga para smartphones y dispositivos móviles, de una manera rápida, cómoda y segura.</p>
             </div>
             <div class="left">
-              <img src="img/icon/publicity.svg" alt="">
+              <?php echo $html->img('img/icon/publicity.svg'); ?>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@
             <div class="flex_container_description">
               <div class="flex_item">
                 <figure class="tech_item" id="eight_gagdet">
-                  <img src="img/icon/tech/phones_x8.svg" alt="">
+                  <?php echo $html->img('img/icon/tech/phones_x8.svg'); ?>
                   <figcaption>
                     <h2>Hasta 8 dispositivos</h2>
                     <p>Permite recargar hasta 8 smartphones y dispositivos móviles a la vez.</p>
@@ -72,7 +72,7 @@
 
               <div class="flex_item">
                 <figure class="tech_item" id="batery">
-                  <img src="img/icon/tech/battery.svg" alt="">
+                  <?php echo $html->img('img/icon/tech/battery.svg'); ?>
                   <figcaption>
                     <h2>Batería</h2>
                     <p>Batería interna de 20800 mAh con funcionamiento ininterrumpido de 7 horas.</p>
@@ -82,7 +82,7 @@
 
               <div class="flex_item">
                 <figure class="tech_item" id="size">
-                  <img src="img/icon/tech/size.svg" alt="">
+                  <?php echo $html->img('img/icon/tech/size.svg'); ?>
                   <figcaption>
                     <h2>Dimensiones</h2>
                     <p>
@@ -96,7 +96,7 @@
 
               <div class="flex_item">
                 <figure class="tech_item" id="player">
-                  <img src="img/icon/tech/player.svg" alt="">
+                  <?php echo $html->img('img/icon/tech/player.svg'); ?>
                   <figcaption>
                     <h2>Reproductor de video e imágenes</h2>
                     <p>Reproductor de imágenes (JPG, GIF, BMP y PNG) y video (MP4, WMV, MOV y AVI)</p>
@@ -106,7 +106,7 @@
 
               <div class="flex_item">
                 <figure class="tech_item" id="screen">
-                  <img src="img/icon/tech/screen.svg" alt="">
+                  <?php echo $html->img('img/icon/tech/screen.svg'); ?>
                   <figcaption>
                     <h2>Pantalla</h2>
                     <p>Pantalla de 7' LCD Full Color con resolución 600x1024 pixeles.</p>
@@ -121,22 +121,34 @@
               </div>
               <div class="flex_container_description">
                 <div class="flex_item">
-                  <figure><img src="img/gallery/photo_1.jpg" class="img-responsive" alt=""></figure>
+                  <figure>
+                    <?php echo $html->img('img/gallery/photo_1.jpg', ['class'=>'img-responsive']); ?>
+                  </figure>
                 </div>
                 <div class="flex_item">
-                  <figure><img src="img/gallery/photo_2.jpg" class="img-responsive" alt=""></figure>
+                  <figure>
+                    <?php echo $html->img('img/gallery/photo_2.jpg', ['class'=>'img-responsive']); ?>
+                  </figure>
                 </div>
                 <div class="flex_item">
-                  <figure><img src="img/gallery/photo_4.jpg" class="img-responsive" alt=""></figure>
+                  <figure>
+                    <?php echo $html->img('img/gallery/photo_4.jpg', ['class'=>'img-responsive']); ?>
+                  </figure>
                 </div>
                 <div class="flex_item">
-                  <figure><img src="img/gallery/photo_3.jpg" class="img-responsive" alt=""></figure>
+                  <figure>
+                    <?php echo $html->img('img/gallery/photo_3.jpg', ['class'=>'img-responsive']); ?>
+                  </figure>
                 </div>
                 <div class="flex_item">
-                  <figure><img src="img/gallery/photo_5.jpg" class="img-responsive" alt=""></figure>
+                  <figure>
+                    <?php echo $html->img('img/gallery/photo_5.jpg', ['class'=>'img-responsive']); ?>
+                  </figure>
                 </div>
                 <div class="flex_item">
-                  <figure><img src="img/gallery/photo_6.jpg" class="img-responsive" alt=""></figure>
+                  <figure>
+                    <?php echo $html->img('img/gallery/photo_6.jpg', ['class'=>'img-responsive']); ?>
+                  </figure>
                 </div>
               </div>
             </div>
@@ -144,3 +156,6 @@
           </div>
         </div>
       </section>
+      <?php
+        include 'includes/find_us.php';
+      ?>
