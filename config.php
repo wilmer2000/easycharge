@@ -11,7 +11,7 @@ define('DBNAME','blog');
 $db = new PDO("mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-require_once './classes/class.user.php';
+require_once '../classes/class.user.php';
 
 //load classes as needed
 // function __autoload($class) {

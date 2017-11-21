@@ -26,8 +26,8 @@
       <header>
         <div class="container">
           <div class="menu_mobile">
-            <a class="logo_" href="index.html">
-              <img src="img/logo-battery-white.svg" alt="">
+            <a class="logo_" href=".">
+              <?php echo $html->img('img/logo-battery-white.svg'); ?>
             </a>
             <a class="btn_menu js_btn_menu" href="#">
               <span></span>
@@ -38,12 +38,12 @@
           <nav id="menu">
             <ul>
               <li class="logo">
-                <a href="index.php">
+                <a href=".">
                   <?php echo $html->img('img/logo-battery-white.svg'); ?>
                 </a>
               </li>
               <li>
-                <a href="#easycharge">¿Quienes somos?</a>
+                <a href="./#easycharge">¿Quienes somos?</a>
               </li>
               <li>
                 <?php echo $html->link('SHOW', 'show'); ?>
@@ -68,17 +68,16 @@
         </div>
       </header>
 
-      <!-- This is the content placeholder, pages will be included here -->
       <?php echo template_content(); ?>
 
 
       <footer id="contacto">
         <div class="slider  separator_top ">
           <div class="gradiant">
-            <img src="img/slider/slide_2.jpg" alt="" class="img-responsive img_slider">
+            <?php echo $html->img('img/slider/slide_2.jpg',['class'=>'img-responsive img_slider']); ?>
           </div>
-          <div class="flex_center">
-            <div class="flex_item">
+          <div class="container">
+            <div class="col-md-8 col-centrered">
               <div class="flex_formulario">
                 <div class="right">
                   <form>

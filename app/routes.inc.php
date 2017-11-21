@@ -8,8 +8,7 @@ $route['show'] = 'pages/show.php';
 $route['rent'] = 'pages/rent.php';
 $route['eventos'] = 'pages/eventos.php';
 $route['anunciate'] = 'pages/anunciate.php';
-$route['admin'] = 'pages/admin/login.php';
-$route['admin/logged'] = 'pages/admin/index.php';
+// $route['link-tracer/(\d+)'] = 'pages/anunciate.php';
 
 // You can match simple routes
 // $route['admin/albums'] = 'pages/admin/albums/index.php';

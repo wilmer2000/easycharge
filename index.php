@@ -80,6 +80,7 @@ function route_match() {
 
         if(preg_match('#' . $r . '$#', $url, $matches)) {
             array_shift($matches);
+
             $_GET['custom_arguments'] = $matches;
 
             $matched_route = $r;
