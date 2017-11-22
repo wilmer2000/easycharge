@@ -31,88 +31,87 @@
 	  });
 	</script>
 </head>
-<body>
-
-	<div id="wrapper">
-
+	<body>
 		<?php include('menu.php');?>
+		<div id="wrapper">
+			<div class="container">
+				<div class="col-md-12">
+					<h2>Agregar Post</h2>
 
-		<div class="container">
+					<?php
+						//if form has been submitted process it
+						if(isset($_POST['submit'])){
 
-			<h2>Agregar Post</h2>
+							$_POST = array_map( 'stripslashes', $_POST );
 
-			<?php
-				//if form has been submitted process it
-				if(isset($_POST['submit'])){
+							//collect form data
+							extract($_POST);
 
-					$_POST = array_map( 'stripslashes', $_POST );
+							//very basic validation
+							if($postTitle ==''){
+								$error[] = 'Please enter the title.';
+							}
 
-					//collect form data
-					extract($_POST);
+							if($postDesc ==''){
+								$error[] = 'Please enter the description.';
+							}
 
-					//very basic validation
-					if($postTitle ==''){
-						$error[] = 'Please enter the title.';
-					}
+							if($postCont ==''){
+								$error[] = 'Please enter the content.';
+							}
 
-					if($postDesc ==''){
-						$error[] = 'Please enter the description.';
-					}
+							if(!isset($error)){
 
-					if($postCont ==''){
-						$error[] = 'Please enter the content.';
-					}
+								try {
 
-					if(!isset($error)){
+									//insert into database
+									$stmt = $db->prepare('INSERT INTO blog_posts (postTitle,postDesc,postCont,postDate) VALUES (:postTitle, :postDesc, :postCont, :postDate)') ;
+									$stmt->execute(array(
+										':postTitle' => $postTitle,
+										':postDesc' => $postDesc,
+										':postCont' => $postCont,
+										':postDate' => date('Y-m-d H:i:s')
+									));
 
-						try {
+									//redirect to index page
+									header('Location: index.php?action=added');
+									exit;
 
-							//insert into database
-							$stmt = $db->prepare('INSERT INTO blog_posts (postTitle,postDesc,postCont,postDate) VALUES (:postTitle, :postDesc, :postCont, :postDate)') ;
-							$stmt->execute(array(
-								':postTitle' => $postTitle,
-								':postDesc' => $postDesc,
-								':postCont' => $postCont,
-								':postDate' => date('Y-m-d H:i:s')
-							));
+								} catch(PDOException $e) {
+								    echo $e->getMessage();
+								}
 
-							//redirect to index page
-							header('Location: index.php?action=added');
-							exit;
+							}
 
-						} catch(PDOException $e) {
-						    echo $e->getMessage();
 						}
 
-					}
+						//check for any errors
+						if(isset($error)){
+							foreach($error as $error){
+								echo '<p class="error">'.$error.'</p>';
+							}
+						}
+					?>
 
-				}
+					<form action='' method='post'>
+						<div class="form-group">
+							<label>Title</label>
+							<input class='form-control' type='text' name='postTitle' value='<?php if(isset($error)){ echo $_POST['postTitle'];}?>'>
+						</div>
+						<div class="form-group">
+							<label>Description</label>
+							<textarea class='form-control' name='postDesc' cols='60' rows='10'><?php if(isset($error)){ echo $_POST['postDesc'];}?></textarea>
+						</div>
+						<div class="form-group">
+							<label>Content</label>
+							<textarea class='form-control' name='postCont' cols='60' rows='10'><?php if(isset($error)){ echo $_POST['postCont'];}?></textarea>	
+						</div>
 
-				//check for any errors
-				if(isset($error)){
-					foreach($error as $error){
-						echo '<p class="error">'.$error.'</p>';
-					}
-				}
-			?>
+						<input type='submit' name='submit' value='Submit' class='btn btn-success'>
 
-			<form action='' method='post'>
-
-				<p><label>Title</label><br />
-				<input type='text' name='postTitle' value='<?php if(isset($error)){ echo $_POST['postTitle'];}?>'></p>
-
-				<p><label>Description</label><br />
-				<textarea name='postDesc' cols='60' rows='10'><?php if(isset($error)){ echo $_POST['postDesc'];}?></textarea></p>
-
-				<p><label>Content</label><br />
-				<textarea name='postCont' cols='60' rows='10'><?php if(isset($error)){ echo $_POST['postCont'];}?></textarea></p>
-
-				<p><input type='submit' name='submit' value='Submit'></p>
-
-			</form>
+					</form>
+				</div>
+			</div>
 		</div>
-
-	</div>
-
-  </body>
+	</body>
 </html>

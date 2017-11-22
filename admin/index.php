@@ -39,50 +39,53 @@
 
 		<div id="wrapper">
 			<div class="container">
-				<?php 
-					//show message from add / edit page
-					if(isset($_GET['action'])){ 
-						echo '<h3>Post '.$_GET['action'].'.</h3>'; 
-					} 
-				?>
+				<div class="col-md-12">
+					<?php 
+						//show message from add / edit page
+						if(isset($_GET['action'])){ 
+							echo '<h3>Post '.$_GET['action'].'.</h3>'; 
+						} 
+					?>
 
-				<table>
-					<thead>
-						<tr>
-							<th>Title</th>
-							<th>Date</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php
-							try {
+					<table class="table table-condensed">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Date</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+								try {
 
-								$stmt = $db->query('SELECT postID, postTitle, postDate FROM blog_posts ORDER BY postID DESC');
-								while($row = $stmt->fetch()){
+									$stmt = $db->query('SELECT postID, postTitle, postDate FROM blog_posts ORDER BY postID DESC');
+									while($row = $stmt->fetch()){
 
-								echo '<tr>';
-								echo '<td>'.$row['postTitle'].'</td>';
-								echo '<td>'.date('jS M Y', strtotime($row['postDate'])).'</td>';
-								?>
+									echo '<tr>';
+									echo '<td>'.$row['postTitle'].'</td>';
+									echo '<td>'.date('jS M Y', strtotime($row['postDate'])).'</td>';
+									?>
 
-								<td>
-									<a href="edit-post.php?id=<?php echo $row['postID'];?>">Edit</a> | 
-									<a href="javascript:delpost('<?php echo $row['postID'];?>','<?php echo $row['postTitle'];?>')">Delete</a>
-								</td>
+									<td>
+										<a href="edit-post.php?id=<?php echo $row['postID'];?>">Edit</a> | 
+										<a href="javascript:delpost('<?php echo $row['postID'];?>','<?php echo $row['postTitle'];?>')">Delete</a>
+									</td>
 
-								<?php 
-									echo '</tr>';
+									<?php 
+										echo '</tr>';
+									}
+
+								} catch(PDOException $e) {
+									echo $e->getMessage();
 								}
+							?>
+						</tbody>
+					</table>
 
-							} catch(PDOException $e) {
-								echo $e->getMessage();
-							}
-						?>
-					</tbody>
-				</table>
-
-				<p><a href='add-post.php'>Add Post</a></p>
+					<p><a href='add-post.php'>Add Post</a></p>
+					
+				</div>
 			</div>
 		</div>
 	</body>

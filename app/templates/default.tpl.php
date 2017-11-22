@@ -21,7 +21,7 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
 
     </head>
-    <body class="index_section">
+    <body>
 
       <header>
         <div class="container">

@@ -6,108 +6,108 @@
 if(!$user->is_logged_in()){ header('Location: login.php'); }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin v1.0 - Easy Charge</title>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Admin v1.0 - Easy Charge</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
 
-  </head>
-  <body>
-
-<div id="wrapper">
+	</head>
+	<body>
 
 	<?php include('menu.php');?>
-	<p><a href="users.php">User Admin Index</a></p>
+	<div id="wrapper">
+		<div class="container">
+			<div class="col-md-12">
+				<p><a href="users.php">User Admin Index</a></p>
+				<h2>Add User</h2>
+				<?php
 
-	<h2>Add User</h2>
+				//if form has been submitted process it
+				if(isset($_POST['submit'])){
 
-	<?php
+					//collect form data
+					extract($_POST);
 
-	//if form has been submitted process it
-	if(isset($_POST['submit'])){
+					//very basic validation
+					if($username ==''){
+						$error[] = 'Please enter the username.';
+					}
 
-		//collect form data
-		extract($_POST);
+					if($password ==''){
+						$error[] = 'Please enter the password.';
+					}
 
-		//very basic validation
-		if($username ==''){
-			$error[] = 'Please enter the username.';
-		}
+					if($passwordConfirm ==''){
+						$error[] = 'Please confirm the password.';
+					}
 
-		if($password ==''){
-			$error[] = 'Please enter the password.';
-		}
+					if($password != $passwordConfirm){
+						$error[] = 'Passwords do not match.';
+					}
 
-		if($passwordConfirm ==''){
-			$error[] = 'Please confirm the password.';
-		}
+					if($email ==''){
+						$error[] = 'Please enter the email address.';
+					}
 
-		if($password != $passwordConfirm){
-			$error[] = 'Passwords do not match.';
-		}
+					if(!isset($error)){
 
-		if($email ==''){
-			$error[] = 'Please enter the email address.';
-		}
+						$hashedpassword = $user->password_hash($password, PASSWORD_BCRYPT);
 
-		if(!isset($error)){
+						try {
 
-			$hashedpassword = $user->password_hash($password, PASSWORD_BCRYPT);
+							//insert into database
+							$stmt = $db->prepare('INSERT INTO blog_members (username,password,email) VALUES (:username, :password, :email)') ;
+							$stmt->execute(array(
+								':username' => $username,
+								':password' => $hashedpassword,
+								':email' => $email
+							));
 
-			try {
+							//redirect to index page
+							header('Location: users.php?action=added');
+							exit;
 
-				//insert into database
-				$stmt = $db->prepare('INSERT INTO blog_members (username,password,email) VALUES (:username, :password, :email)') ;
-				$stmt->execute(array(
-					':username' => $username,
-					':password' => $hashedpassword,
-					':email' => $email
-				));
+						} catch(PDOException $e) {
+						    echo $e->getMessage();
+						}
 
-				//redirect to index page
-				header('Location: users.php?action=added');
-				exit;
+					}
 
-			} catch(PDOException $e) {
-			    echo $e->getMessage();
-			}
+				}
 
-		}
+				//check for any errors
+				if(isset($error)){
+					foreach($error as $error){
+						echo '<p class="error">'.$error.'</p>';
+					}
+				}
+				?>
 
-	}
+				<form action='' method='post'>
 
-	//check for any errors
-	if(isset($error)){
-		foreach($error as $error){
-			echo '<p class="error">'.$error.'</p>';
-		}
-	}
-	?>
+					<p><label>Username</label><br />
+					<input type='text' name='username' value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
 
-	<form action='' method='post'>
+					<p><label>Password</label><br />
+					<input type='password' name='password' value='<?php if(isset($error)){ echo $_POST['password'];}?>'></p>
 
-		<p><label>Username</label><br />
-		<input type='text' name='username' value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
+					<p><label>Confirm Password</label><br />
+					<input type='password' name='passwordConfirm' value='<?php if(isset($error)){ echo $_POST['passwordConfirm'];}?>'></p>
 
-		<p><label>Password</label><br />
-		<input type='password' name='password' value='<?php if(isset($error)){ echo $_POST['password'];}?>'></p>
+					<p><label>Email</label><br />
+					<input type='text' name='email' value='<?php if(isset($error)){ echo $_POST['email'];}?>'></p>
+					
+					<p><input type='submit' name='submit' value='Add User'></p>
 
-		<p><label>Confirm Password</label><br />
-		<input type='password' name='passwordConfirm' value='<?php if(isset($error)){ echo $_POST['passwordConfirm'];}?>'></p>
-
-		<p><label>Email</label><br />
-		<input type='text' name='email' value='<?php if(isset($error)){ echo $_POST['email'];}?>'></p>
-		
-		<p><input type='submit' name='submit' value='Add User'></p>
-
-	</form>
-
-</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
   </body>
 </html>

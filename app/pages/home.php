@@ -1,3 +1,4 @@
+<div class="index_section">
       <section id="inicio">
         <div class="slider separator_bottom gradiant">
           <div class="flex_center">
@@ -159,3 +160,4 @@
       <?php
         include 'includes/find_us.php';
       ?>
+</div>
