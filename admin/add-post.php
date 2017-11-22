@@ -13,20 +13,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Admin v1.0 - Easy Charge</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet">
 
 	<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
 	<script>
 	  tinymce.init({
 	      selector: "textarea",
-	      plugins: [
-	          "advlist autolink lists link image charmap print preview anchor",
-	          "searchreplace visualblocks code fullscreen",
-	          "insertdatetime media table contextmenu paste"
-	      ],
 	      toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
 	  });
 	</script>
@@ -106,9 +101,7 @@
 							<label>Content</label>
 							<textarea class='form-control' name='postCont' cols='60' rows='10'><?php if(isset($error)){ echo $_POST['postCont'];}?></textarea>	
 						</div>
-
-						<input type='submit' name='submit' value='Submit' class='btn btn-success'>
-
+						<button class='btn btn-success' name='submit' value='Submit'>Agregar post</button>
 					</form>
 				</div>
 			</div>
