@@ -40,6 +40,7 @@ textarea{
     padding: 10px 15px;
     background: transparent;
 }
+.col-centrered {float: none;margin: 0 auto;}
 .btn {
     border: solid 2px;
     border-radius: 5px;
@@ -420,6 +421,10 @@ header nav ul li a:hover{color: #FFF;}
     background: #FFF;
     padding:30px;
 }
+footer {
+    clear: both;
+    position: relative;
+}
 footer h3{margin:0;margin-bottom:15px;}
 footer .form-group{margin-bottom: 0;}
 footer .form-group+.form-group{margin-top:30px;}
@@ -430,6 +435,21 @@ footer textarea {
     color: #FFF!important;
     background: transparent!important;
     font-size: 18px!important
+}
+footer .gradiant{
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+}
+footer .separator_top.slider{
+    padding: 0 0 50px;
+}
+footer .separator_top:after{
+    top: 0;
+    z-index: -1;
 }
 
 footer ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
