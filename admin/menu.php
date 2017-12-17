@@ -7,7 +7,8 @@
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav mr-auto">
 	         <ul class="nav navbar-nav " id='adminmenu'>
-				<li class="nav-item"><a class="nav-link" href='index.php'>Secciones</a></li>
+				<li class="nav-item"><a class="nav-link" href='list-section.php'>Secciones</a></li>
+				<li class="nav-item"><a class="nav-link" href='users.php'>Usuarios</a></li>
 				<li class="nav-item"><a class="nav-link" href='users.php'>Usuarios</a></li>
 				<li class="nav-item"><a class="nav-link" href='logout.php'>Logout</a></li>
 	         </ul>
